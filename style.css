@@ -1,0 +1,261 @@
+
+:root{
+  --clr-scheme-pink: #ffc7c7;
+  --clr-scheme-light-pink: #FFE2E2;
+  --clr-scheme-white: #F6F6F6;
+  --clr-scheme-mauvre: #8785A2;
+  --clr-timeline-blue: #424874;
+  --clr-timeline-red: #F61067;
+  --clr-background: #000000;
+  --clr-font-color: #F3DDB6;
+  --clr-font-color-darker:#d6bf99;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#custom-cursor{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate3d(-50%, -50%, 0);
+  top: 0;
+  left: 0;
+  background-color: var(--clr-scheme-pink);
+}
+
+#custom-cursor-lazy{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-scheme-pink);
+  position: absolute;
+  transform: translate3d(-50%, -50%, 0);
+  top: 0;
+  left: 0;
+}
+
+#background{
+  margin: 0 auto;
+  margin-top: 2%;
+  width: 73vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#background h2, #background p{
+  font-family:'KENOKY', sans-serif;
+
+  color: var(--clr-font-color);
+}
+
+#background p{
+  font-size: 1rem;
+}
+
+#background h2{
+  font-size: 3rem;
+}
+
+/* #region */
+/* ================================================ Styling of about me ===================================== */
+
+#about-me > h1{
+  position: relative;
+  margin-left: 10vw;
+  color: var(--clr-font-color);
+  font-family:'KENOKY', sans-serif;
+  font-size: 10em;
+  font-style: normal;
+}
+#about-me > p{
+  position: relative;
+  margin-top: 3vh;
+  margin-left: 14vw;
+  color: var(--clr-font-color-darker);
+  font-family:'Inter', sans-serif;
+  line-height: 2em;
+}
+
+#about-me-grid{
+  height: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
+
+#characteristic > p{
+  color: var(--clr-font-color-darker);
+  font-family:'Inter', sans-serif;
+  margin: 5%;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+/* 
+#region 
+*/
+
+/* 
+  spinning animation
+  ==================
+*/
+
+#spinner{
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+/* #endregion */
+
+/* 
+  #region
+*/
+
+/* Sizing of each card 
+=================== */
+#frontpage{
+  width: 100vw;
+  height: 100vh;
+}
+
+#about-me{
+  width: 100vw;
+  height: 100vh;
+}
+
+#skills{
+  width: 100vw;
+  height: 100vh;
+}
+
+#badges{
+  width: 100vw;
+  height: 100vh;
+}
+
+#contact-me{
+  width: 100vw;
+  height: 100vh;
+}
+
+#work-experience{
+  width: 100vw;
+  height: 100vh;
+}
+
+/*
+  #endregion
+*/
+
+/* 
+  #region
+*/
+
+/* 
+  Color of each card 
+  ===================
+*/
+#frontpage,#about-me, #skills, #badges, #contact-me, #work-experience{
+  background-color: var(--clr-background);
+}
+
+/* 
+  #endregion
+*/
+
+.workplace{
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, var(--clr-timeline-blue) 0%, var(--clr-timeline-red) 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  counter-increment: section;
+  height: calc(100% / 3);
+  position: relative;
+}
+
+.workplace:before {
+  content: counter(section);
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 1.25em;
+  width: 1.25em;
+  background-color: var(--clr-scheme-pink);
+  text-align: center;
+  line-height: 1.25em;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.workplace:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+.workplace:nth-child(odd):before {
+  left: 100%;
+  margin-left: -20px;
+}
+
+.workplace:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+.workplace:nth-child(even):before {
+  right: 100%;
+  margin-right: -20px;
+}
+
+.workplace:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.workplace:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* 
+  #region 
+*/
+
+/* 
+  ====================================================================Swiper js styling================================================================
+*/
+
+.swiper-pagination{
+  background-color: transparent;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: white
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--clr-timeline-red, var(--clr-timeline-red)); 
+}
+
+/* Move progress bar */
+.swiper-pagination-horizontal ,.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  top: 90vh;
+  left: 10vw;
+  right: 10vw;
+}
+
+/*
+  #endregion
+*/ 
