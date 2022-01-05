@@ -17,28 +17,6 @@
   box-sizing: border-box;
 }
 
-#custom-cursor{
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate3d(-50%, -50%, 0);
-  top: 0;
-  left: 0;
-  background-color: var(--clr-scheme-pink);
-}
-
-#custom-cursor-lazy{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid var(--clr-scheme-pink);
-  position: absolute;
-  transform: translate3d(-50%, -50%, 0);
-  top: 0;
-  left: 0;
-}
-
 #background{
   margin: 0 auto;
   margin-top: 2%;
@@ -177,58 +155,60 @@
   #endregion
 */
 
-.workplace{
-  border-top: 2px solid;
-  border-image: linear-gradient(to right, var(--clr-timeline-blue) 0%, var(--clr-timeline-red) 100%);
-  border-image-slice: 1;
-  border-width: 3px;
-  counter-increment: section;
-  height: calc(100% / 3);
+/* #endregion */
+
+
+/* #region */
+/* 
+  ====================================================================Styling of work experience================================================================
+*/
+#work-experience > h2{
   position: relative;
+  margin-left: 10vw;
+  color: var(--clr-font-color);
+  font-family:'KENOKY', sans-serif;
+  font-size: 6em;
+  font-style: normal;
 }
 
-.workplace:before {
-  content: counter(section);
-  position: absolute;
-  border-radius: 50%;
-  padding: 10px;
-  height: 1.25em;
-  width: 1.25em;
-  background-color: var(--clr-scheme-pink);
-  text-align: center;
-  line-height: 1.25em;
-  color: #ffffff;
+.workplace{
+  font-family: "Inter", sans-serif;
+  color: var(--clr-font-color);
+  margin-top: 7%;
+  border-bottom: var(--clr-font-color) solid 1px;
+}
+
+.workplace .swiper.timelineSwiper .swiper-wrapper .swiper-slide > h3{
+  font-size: 2em;
+  line-height: 5rem;
+}
+
+.workplace .swiper.timelineSwiper .swiper-wrapper .swiper-slide > p{
   font-size: 1em;
 }
 
-.workplace:nth-child(odd) {
-  border-right: 3px solid;
-  padding-left: 0;
-}
-.workplace:nth-child(odd):before {
-  left: 100%;
-  margin-left: -20px;
+#work-experience > ul {
+  list-style-type:none;
+  position: relative;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
-.workplace:nth-child(even) {
-  border-left: 3px solid;
-  padding-right: 0;
-}
-.workplace:nth-child(even):before {
-  right: 100%;
-  margin-right: -20px;
+.timeline{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  
 }
 
-.workplace:first-child {
-  border-top: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+.timeline > img{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 3%;
+  height: 2%;
 }
 
-.workplace:last-child {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
+
+/* #endregion */
 
 /* 
   #region 
@@ -246,7 +226,7 @@
   color: white
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: var(--clr-timeline-red, var(--clr-timeline-red)); 
+  background: var(--clr-font-color, var(--clr-font-color)); 
 }
 
 /* Move progress bar */
