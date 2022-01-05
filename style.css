@@ -15,6 +15,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
+}
+
+
+#custom-cursor{
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 30;
+  transform: translate3d( -50%, -50%, 0);
+  border-radius: 50%;
+  background-color: var(--clr-font-color);
+  cursor: none;
+  pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 #background{
@@ -210,6 +225,37 @@
 
 /* #endregion */
 
+
+/* #region */
+
+#skills > h1{
+  margin-left: 10vw;
+  margin-bottom: 1rem;
+  color: var(--clr-font-color);
+  font-family:'KENOKY', sans-serif;
+  font-size: 6em;
+  font-style: normal;
+}
+
+#all-projects{
+  display: flex;
+  margin:0 auto;
+  width: 80vw;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#all-projects > a{
+  text-decoration: none;
+  color: var(--clr-font-color);
+  width: 48%;
+  border-bottom: var(--clr-font-color) 2px solid;
+  padding: 2rem 0;
+}
+
+
+/* #endregion */
 /* 
   #region 
 */

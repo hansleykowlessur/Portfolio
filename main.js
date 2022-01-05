@@ -1,6 +1,7 @@
 import './style.css'
 import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
+
 let mainSwiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -28,4 +29,10 @@ let verticalSwiper = new Swiper(".timelineSwiper",{
       translate: ['100%', 0, 0],
     },
   },
+})
+
+let customCursor = document.getElementById("custom-cursor")
+document.addEventListener("mousemove", e => {
+  customCursor.style.left = e.pageX + 'px';
+  customCursor.style.top  = e.pageY + 'px';
 })
