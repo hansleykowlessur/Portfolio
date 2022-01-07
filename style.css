@@ -281,12 +281,28 @@
   font-style: italic;
 }
 
-#current-skills {
+#current-skills > p{
   margin-left: 10vw;
+  margin-top: 4%;
   color: var(--clr-font-color);
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
+  transform: translateX(100%);
+  animation: slidein 30s linear infinite;
+}
+
+#current-skills{
+  white-space: nowrap;
+}
+
+@keyframes slidein {
+  from { 
+    transform: translateX(100%); 
+  }
+  to { 
+    transform: translateX(-200%); 
+  }
 }
 
 /* #endregion */
