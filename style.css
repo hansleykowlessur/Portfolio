@@ -306,9 +306,80 @@
 }
 
 /* #endregion */
+
+/* #region */
+
+
+
+.gsap-animation{
+  height: 100vh;
+  width: 100vw;
+}
+
+.orange-background{
+  background-color: orange;
+}
+
+#languages-technologies{
+  background-color: blue;
+}
+
+#digital-badges{
+  background-color: yellow;
+}
+
+#courses{
+  background-color: red;
+}
+/* #endregion */
+
 /* 
   #region 
 */
+
+.contacting{
+  display: flex;
+  color: var(--clr-font-color);
+  margin:0 auto;
+  width: 80vw;
+  height: 100vh;
+  gap: 2rem;
+}
+
+#stopping-by, #contact-email{
+  width: 50%;
+  height: 100%;
+}
+
+#stopping-by > h1{
+  font-family: "KENOKY", sans-serif;
+  font-size: 7em;
+  margin-top: 50%;
+}
+
+#social-media{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#social-media > a{
+  text-decoration: none;
+  color: var(--clr-font-color);
+  font-size: 3em;
+  font-family: "Inter", sans-serif;
+}
+
+#contact-email{
+  display: flex;
+}
+/* 
+  #endregion 
+*/
+
+
+
+/* #region */
 
 /* 
   ====================================================================Swiper js styling================================================================
