@@ -32,8 +32,21 @@
   mix-blend-mode: difference;
 }
 
+
 #cursor-content > svg {
   transform: translate(-50%, -50%);
+}
+
+.underline-styling {
+  background-image: linear-gradient(var(--clr-timeline-red), var(--clr-timeline-red));
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+}
+
+.underline-styling:hover {
+  background-size: 100% 3px;
 }
 
 #background{
@@ -281,56 +294,76 @@
   font-style: italic;
 }
 
-#current-skills > p{
-  margin-left: 10vw;
-  margin-top: 4%;
-  color: var(--clr-font-color);
-  font-size: 2rem;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
-  transform: translateX(100%);
-  animation: slidein 30s linear infinite;
-}
-
-#current-skills{
-  white-space: nowrap;
-}
-
-@keyframes slidein {
-  from { 
-    transform: translateX(100%); 
-  }
-  to { 
-    transform: translateX(-200%); 
-  }
-}
 
 /* #endregion */
 
 /* #region */
 
-#badges-container{
+#badges-container {
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-top: 5%;
+  margin-top: 1%;
   color: var(--clr-font-color);
+  height: 50%;
+
+}
+
+#languages-technologies > h1{
+  font-family: "KENOKY", sans-serif;
+  font-size: 6em;
+  line-height: 2em;
+}
+
+#languages-technologies > p{
+  font-family: "Inter", sans-serif;
+  
 }
 
 .badges-certificates{
   display: flex;
   height: 100%;
+
+}
+
+.badges-certificates ul li a {
+  text-decoration: none;
+  color: var(--clr-font-color);
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 #all-badges, #all-certificates{
   margin-top: 5%;
   width: 50%;
-  height: 50%;
 }
 
 #all-badges{
   border-left: solid 1px var(--clr-font-color);
   border-top: solid  1px var(--clr-font-color);
 }
+
+
+#all-badges > ul, #all-certificates > ul {
+  list-style-type: none;
+  padding: 2rem;
+  line-height: 7rem;
+  font-family: "Inter", sans-serif;
+}
+
+#all-badges > h2, #all-certificates > h2 {
+  margin-left: 50%;
+  margin-top: 5%;
+  font-family: "KENOKY", sans-serif;
+}
+
+#all-certificates {
+  border-right: solid 1px var(--clr-font-color);
+  border-bottom: solid  1px var(--clr-font-color);
+}
+
+
+
 
 /* #endregion */
 

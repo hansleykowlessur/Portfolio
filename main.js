@@ -12,6 +12,7 @@ let mainSwiper = new Swiper(".mySwiper", {
   },
   effect: 'slide',
   speed: 1500,
+  loop: true,
 });
 
 let verticalSwiper = new Swiper(".timelineSwiper",{
