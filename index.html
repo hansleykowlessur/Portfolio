@@ -7,14 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/kenoky" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hans portfolio</title>
@@ -240,22 +233,23 @@
             </div>
           </div>
           <div class="swiper-slide" id="badges">
-            <div class="gsap-animation" id="choices">
-              <div id="to-languages-technologies" style="color: white;">
-                Click me to go on languages-technologies
+            <div id="badges-container">
+              <div id="languages-technologies">
+                <h1>Languages and technologies</h1>
+                <p>
+                  C# ♦ .NET ♦ HTML & CSS ♦ SQL ♦ Elasticsearch ♦ React ♦ Javascript ♦ Python ♦ Tensorflow ♦ OpenCV ♦ NLP ♦ Matplotlib ♦ Agile methodology
+                </p>
               </div>
-              
+              <div class="badges-certificates">
+                <div id="all-badges">
+                 <h2>Badges</h2>
+                </div>
+                <div id="all-certificates">
+                  <h2>Certificates</h2>
+                </div>
+              </div>
             </div>
-            <div class="orange-background gsap-animation" id="orange-transition"></div>
-            <div class="gsap-animation" id="languages-technologies">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorum at magni unde molestiae adipisci ut perferendis commodi tenetur facere error delectus in animi nobis, odit labore minima, quibusdam placeat.</p>
-            </div>
-            <div class="gsap-animation" id="digital-badges">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus expedita exercitationem molestias, nihil rerum recusandae reiciendis eaque, eligendi similique excepturi dolor quam, sint omnis tempora? Saepe porro illo inventore explicabo!</p>
-            </div>  
-            <div class="gsap-animation" id="courses">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum dicta maxime repudiandae eum cupiditate blanditiis voluptas eveniet recusandae numquam amet, impedit, exercitationem tempore porro iure at dolorum alias? Autem, reprehenderit?</p>
-            </div> 
+            
           </div>
           <div class="swiper-slide" id="contact-me">
             <div class="contacting">
@@ -272,7 +266,7 @@
               </div>
               <div id="contact-email">
                 <h2>Feel free to contact me by email</h2>
-                <p>hansleykowlessur.remote@gmail.com</p>
+                <p class="email-styling">hansleykowlessur.remote@gmail.com</p>
                 <P>Special thanks goes to : <span>XXX for providing the custom arrows</span></P>
                 
               </div>

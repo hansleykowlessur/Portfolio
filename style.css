@@ -309,28 +309,29 @@
 
 /* #region */
 
-
-
-.gsap-animation{
-  height: 100vh;
-  width: 100vw;
+#badges-container{
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 5%;
+  color: var(--clr-font-color);
 }
 
-.orange-background{
-  background-color: orange;
+.badges-certificates{
+  display: flex;
+  height: 100%;
 }
 
-#languages-technologies{
-  background-color: blue;
+#all-badges, #all-certificates{
+  margin-top: 5%;
+  width: 50%;
+  height: 50%;
 }
 
-#digital-badges{
-  background-color: yellow;
+#all-badges{
+  border-left: solid 1px var(--clr-font-color);
+  border-top: solid  1px var(--clr-font-color);
 }
 
-#courses{
-  background-color: red;
-}
 /* #endregion */
 
 /* 
@@ -348,7 +349,7 @@
 
 #stopping-by, #contact-email{
   width: 50%;
-  height: 100%;
+  height: 50%;
 }
 
 #stopping-by > h1{
@@ -371,7 +372,18 @@
 }
 
 #contact-email{
+  margin-top: 20%;
   display: flex;
+  color: var(--clr-font-color);
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.email-styling{
+  font-family: "KENOKY", sans-serif;
+  border-bottom: var(--clr-font-color) 1px solid;
+  margin-right: auto;
+  padding: 1rem;
 }
 /* 
   #endregion 
