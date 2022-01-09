@@ -11,15 +11,27 @@
   --clr-font-color-darker:#d6bf99;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   cursor: none;
 }
 
+#myLogo {
+  fill-opacity: 0;
+  transition: fill-opacity 0.5s;
+}
+#myLogo.finished {
+  fill-opacity: 1;
+}
 
-#custom-cursor{
+.svg-animation-logo {
+  margin-top: 15%;
+  margin-left: 30%;
+}
+
+#custom-cursor {
   height: 30px;
   width: 30px;
   position: fixed;
@@ -35,6 +47,26 @@
 
 #cursor-content > svg {
   transform: translate(-50%, -50%);
+}
+
+.menu {
+  position: fixed;
+  z-index: 35;
+  margin-left: 30%;
+}
+
+.menu-ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+
+.link-menu {
+  text-decoration: none;
+  color: var(--clr-font-color);
+  font-family: "KENOKY", sans-serif;
+  font-size: 1.2rem;
 }
 
 .underline-styling {

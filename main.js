@@ -12,7 +12,7 @@ let mainSwiper = new Swiper(".mySwiper", {
   },
   effect: 'slide',
   speed: 1500,
-  loop: true,
+  rewind: true,
 });
 
 let verticalSwiper = new Swiper(".timelineSwiper",{
@@ -31,8 +31,46 @@ let verticalSwiper = new Swiper(".timelineSwiper",{
   },
 });
 
+
+new Vivus (
+  'myLogo',{
+    type:'sync',
+    duration: 200,
+    animTimingFunction: Vivus.EASE
+  },
+  function(e){
+    e.el.classList.add("finished")
+  }
+);
+
 let customCursor = document.getElementById("custom-cursor")
 document.addEventListener("mousemove", e => {
   customCursor.style.left = e.pageX + 'px';
   customCursor.style.top  = e.pageY + 'px';
 });
+
+
+const linksOfMenu = {
+  'Home' : 1, 
+  'About me' : 2, 
+  'Experience' : 3, 
+  'Projects' : 4, 
+  'Badges' : 5 , 
+  'Contact' : 6
+};
+
+export function goToPageSwiper(desiredPage) {
+  console.log(desiredPage);
+  let pageToNavigate = 0;
+
+  // Return index to page else return 0 if not found
+  for (const [key, value] of Object.entries(linksOfMenu)) {
+    pageToNavigate = value ? key == desiredPage : 0;
+  };
+  
+  if (pageToNavigate == 0) return null;
+
+  mainSwiper.slideTo(pageToNavigate, 500, false);
+}
+
+
