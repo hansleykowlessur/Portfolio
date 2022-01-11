@@ -60,17 +60,21 @@ const linksOfMenu = {
 };
 
 export function goToPageSwiper(desiredPage) {
-  console.log(desiredPage);
+  
   let pageToNavigate = 0;
 
   // Return index to page else return 0 if not found
   for (const [key, value] of Object.entries(linksOfMenu)) {
-    pageToNavigate = value ? key == desiredPage : 0;
+    if ( key === desiredPage ){
+      pageToNavigate = key;
+    }
+    console.log({ pageToNavigate, key, value});
   };
   
-  if (pageToNavigate == 0) return null;
-
-  mainSwiper.slideTo(pageToNavigate, 500, false);
+  if (pageToNavigate === 0) return null;
+  console.log(pageToNavigate);
+  mainSwiper.slideTo(parseInt(1), 500, false);
+  
 }
 
 

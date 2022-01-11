@@ -33,7 +33,7 @@
     <div class="menu">
       <ul class="menu-ul">
         <li class="anchor-link">
-          <a class="link-menu underline-styling" href="#" >Home</a>
+          <a class="link-menu underline-styling" onclick="navigateSwiper('Home');" href="#" >Home</a>
         </li> 
         <li class="anchor-link"> 
           <a class="link-menu underline-styling" href="#" >About me</a>
@@ -344,13 +344,7 @@
         }
       
       }
-
-      function navigateSwiper(desiredPage) {
-        console.log(desiredPage);
-        goToPageSwiper(desiredPage);
-      }
-      document.querySelector(".anchor-link").addEventListener('click', navigateSwiper);
-
+      window.navigateSwiper = goToPageSwiper;
     </script>
   </body>
 </html>
