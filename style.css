@@ -1,15 +1,14 @@
-
-:root{
-  --clr-scheme-pink: #ffc7c7;
-  --clr-scheme-light-pink: #FFE2E2;
-  --clr-scheme-white: #F6F6F6;
-  --clr-scheme-mauvre: #8785A2;
-  --clr-timeline-blue: #424874;
+:root {
   --clr-timeline-red: #F61067;
   --clr-background: #000000;
   --clr-font-color: #F3DDB6;
   --clr-font-color-darker:#d6bf99;
+  --heading-size: 5rem;
+  --paragraph-size: 1.7rem;
+  --header-size: 10rem;
+  --top-gap: 5vh;
 }
+
 
 * {
   margin: 0;
@@ -18,10 +17,15 @@
   cursor: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 #myLogo {
   fill-opacity: 0;
   transition: fill-opacity 0.5s;
 }
+
 #myLogo.finished {
   fill-opacity: 1;
 }
@@ -44,7 +48,6 @@
   mix-blend-mode: difference;
 }
 
-
 #cursor-content > svg {
   transform: translate(-50%, -50%);
 }
@@ -52,12 +55,12 @@
 .menu {
   position: fixed;
   z-index: 35;
-  margin-left: 30%;
+  margin-left: 27%;
 }
 
 .menu-ul {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   list-style: none;
 }
 
@@ -66,7 +69,7 @@
   text-decoration: none;
   color: var(--clr-font-color);
   font-family: "KENOKY", sans-serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .underline-styling {
@@ -90,36 +93,38 @@
   align-items: center;
 }
 
-#background h2, #background p{
+#background h1, #background p{
   font-family:'KENOKY', sans-serif;
   color: var(--clr-font-color);
 }
 
 #background p{
-  font-size: 1rem;
+  font-size: var(--paragraph-size);
 }
 
-#background h2{
-  font-size: 3rem;
+#background h1{
+  font-size: var(--heading-size);
 }
 
 /* #region */
 /* ================================================ Styling of about me ===================================== */
 
-#about-me > h1{
+#about-me h1{
   position: relative;
   margin-left: 10vw;
+  margin-top: var(--top-gap);
   color: var(--clr-font-color);
   font-family:'KENOKY', sans-serif;
-  font-size: 10em;
+  font-size: var(--header-size);
   font-style: normal;
 }
-#about-me > p{
+#about-me p{
   position: relative;
   margin-top: 3vh;
   margin-left: 14vw;
   color: var(--clr-font-color-darker);
   font-family:'Inter', sans-serif;
+  font-size: var(--paragraph-size);
   line-height: 2em;
 }
 
@@ -130,11 +135,11 @@
   grid-gap: 2em;
 }
 
-#characteristic > p{
+#characteristic p{
   color: var(--clr-font-color-darker);
   font-family:'Inter', sans-serif;
   margin: 5%;
-  font-size: 2em;
+  font-size: var(--paragraph-size);
   line-height: 2em;
 }
 
@@ -168,32 +173,32 @@
 
 /* Sizing of each card 
 =================== */
-#frontpage{
+#frontpage {
   width: 100vw;
   height: 100vh;
 }
 
-#about-me{
+#about-me {
   width: 100vw;
   height: 100vh;
 }
 
-#skills{
+#skills {
   width: 100vw;
   height: 100vh;
 }
 
-#badges{
+#badges {
   width: 100vw;
   height: 100vh;
 }
 
-#contact-me{
+#contact-me {
   width: 100vw;
   height: 100vh;
 }
 
-#work-experience{
+#work-experience {
   width: 100vw;
   height: 100vh;
 }
@@ -228,31 +233,31 @@
 #work-experience > h2{
   position: relative;
   margin-left: 10vw;
+  margin-top: var(--top-gap);
   color: var(--clr-font-color);
   font-family:'KENOKY', sans-serif;
-  font-size: 6em;
+  font-size: var(--header-size);
   font-style: normal;
 }
 
 .workplace{
   font-family: "Inter", sans-serif;
   color: var(--clr-font-color);
-  margin-top: 7%;
+  margin-top: 5%;
   border-bottom: var(--clr-font-color) solid 1px;
 }
 
 .workplace .swiper.timelineSwiper .swiper-wrapper .swiper-slide > h3{
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 5rem;
 }
 
 .workplace .swiper.timelineSwiper .swiper-wrapper .swiper-slide > p{
-  font-size: 1em;
+  font-size: var(--paragraph-size);
 }
 
-#work-experience > ul {
-  list-style-type:none;
-  position: relative;
+#work-experience ul {
+  list-style-type: none;
   margin-left: 10vw;
   margin-right: 10vw;
 }
@@ -260,7 +265,6 @@
 .timeline{
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
-  
 }
 
 .timeline > img{
@@ -276,25 +280,30 @@
 
 /* #region */
 
-#skills > h1{
+/* 
+  ====================================================Styling of projects============================= 
+*/
+
+#skills h1{
+  margin-top: var(--top-gap);
   margin-left: 10vw;
   margin-bottom: 1rem;
   color: var(--clr-font-color);
   font-family:'KENOKY', sans-serif;
-  font-size: 6em;
+  font-size: var(--header-size);
   font-style: normal;
 }
 
 #all-projects{
   display: flex;
-  margin:0 auto;
+  margin: 0 auto;
   width: 80vw;
-  gap: 3rem;
+  gap: 6rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#all-projects > a{
+#all-projects a{
   text-decoration: none;
   color: var(--clr-font-color);
   width: 48%;
@@ -308,6 +317,7 @@
   justify-content: space-between;
   font-family: "Inter", sans-serif;
   font-style: italic;
+  font-size: 1.5rem;
 }
 
 .project-arrow{
@@ -321,7 +331,7 @@
 
 .project-description {
   color: var(--clr-font-color);
-  font-size: 1rem;
+  font-size: var(--paragraph-size);
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
 }
@@ -331,30 +341,33 @@
 
 /* #region */
 
+/* 
+  ==================================================== Styling Courses/Badges============================= 
+*/
+
+
 #badges-container {
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-top: 1%;
+  margin-top: var(--top-gap);
   color: var(--clr-font-color);
   height: 50%;
-
 }
 
-#languages-technologies > h1{
+#languages-technologies h1 {
   font-family: "KENOKY", sans-serif;
-  font-size: 6em;
+  font-size: var(--header-size);
   line-height: 2em;
 }
 
-#languages-technologies > p{
+#languages-technologies p {
   font-family: "Inter", sans-serif;
-  
+  font-size: var(--paragraph-size);
 }
 
-.badges-certificates{
+.badges-certificates {
   display: flex;
   height: 100%;
-
 }
 
 .badges-certificates ul li a {
@@ -362,7 +375,7 @@
   color: var(--clr-font-color);
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: var(--paragraph-size);
 }
 
 #all-badges, #all-certificates{
@@ -370,7 +383,7 @@
   width: 50%;
 }
 
-#all-badges{
+#all-badges {
   border-left: solid 1px var(--clr-font-color);
   border-top: solid  1px var(--clr-font-color);
 }
@@ -383,10 +396,15 @@
   font-family: "Inter", sans-serif;
 }
 
+#all-badges > ul li, #all-certificates > ul li {
+  font-size: var(--paragraph-size); 
+}
+
 #all-badges > h2, #all-certificates > h2 {
   margin-left: 50%;
   margin-top: 5%;
   font-family: "KENOKY", sans-serif;
+  font-size: 3rem;
 }
 
 #all-certificates {
@@ -395,12 +413,14 @@
 }
 
 
-
-
 /* #endregion */
 
 /* 
   #region 
+*/
+
+/* 
+  ==================================================== Styling of Contact me ============================= 
 */
 
 .contacting{
@@ -417,44 +437,45 @@
   height: 50%;
 }
 
-#stopping-by > h1{
+#stopping-by h1{
   font-family: "KENOKY", sans-serif;
-  font-size: 7em;
+  font-size: var(--header-size);
   margin-top: 50%;
 }
 
-#social-media{
+#social-media {
   margin-top: 5%;
   display: flex;
   justify-content: space-evenly;
 }
 
-#social-media > a{
+#social-media a {
   text-decoration: none;
   color: var(--clr-font-color);
-  font-size: 3em;
+  font-size: 3rem;
   font-family: "Inter", sans-serif;
 }
 
-#contact-email{
+#contact-email {
   margin-top: 20%;
   display: flex;
   color: var(--clr-font-color);
   flex-direction: column;
   justify-content: space-around;
+  font-size: var(--paragraph-size);
 }
 
-.email-styling{
+.email-styling {
   font-family: "KENOKY", sans-serif;
   border-bottom: var(--clr-font-color) 1px solid;
   margin-right: auto;
-  padding: 1rem;
+  font-size: var(--paragraph-size);
+  padding: 2rem;
 }
+
 /* 
   #endregion 
 */
-
-
 
 /* #region */
 
@@ -473,7 +494,7 @@
   background: var(--clr-font-color, var(--clr-font-color)); 
 }
 
-/* Move progress bar */
+/* Move progress bar to the bottom*/
 .swiper-pagination-horizontal ,.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
   top: 90vh;
   left: 10vw;

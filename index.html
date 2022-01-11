@@ -33,22 +33,22 @@
     <div class="menu">
       <ul class="menu-ul">
         <li class="anchor-link">
-          <a class="link-menu underline-styling" onclick="navigateSwiper('Home');" href="#" >Home</a>
+          <a class="link-menu underline-styling" onclick="navigateSwiper('Home');return false;" href="#" >Home</a>
         </li> 
         <li class="anchor-link"> 
-          <a class="link-menu underline-styling" href="#" >About me</a>
+          <a class="link-menu underline-styling" onclick="navigateSwiper('About me');return false;" href="#" >About me</a>
         </li> 
         <li class="anchor-link"> 
-          <a class="link-menu underline-styling" href="#" >Work experience</a>
+          <a class="link-menu underline-styling" onclick="navigateSwiper('Experience');return false;" href="#" >Work experience</a>
         </li> 
         <li class="anchor-link"> 
-          <a class="link-menu underline-styling" href="#" >Projects</a>
+          <a class="link-menu underline-styling" onclick="navigateSwiper('Projects');return false;" href="#" >Projects</a>
         </li>
         <li class="anchor-link">
-          <a class="link-menu underline-styling" href="#" >Courses/Badges</a>
+          <a class="link-menu underline-styling" onclick="navigateSwiper('Badges');return false;" href="#" >Courses/Badges</a>
         </li>
         <li class="anchor-link">
-          <a class="link-menu underline-styling" href="#" >Contact me</a>
+          <a class="link-menu underline-styling" onclick="navigateSwiper('Contact');return false;" href="#" >Contact me</a>
         </li>
       </ul>
     </div>
@@ -56,7 +56,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide" id="frontpage">
             <div id="background">
-              <h2>Hey There </h2>
+              <h1>Hey There </h1>
               <p>I love to code. And it's simple as that.</p>
             </div>
           <div class="svg-animation-logo">
@@ -344,7 +344,10 @@
         }
       
       }
+
       window.navigateSwiper = goToPageSwiper;
-    </script>
+      window.showImg = showImg;
+      window.hideImg = hideImg;
+      </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
 let mainSwiper = new Swiper(".mySwiper", {
@@ -15,13 +15,13 @@ let mainSwiper = new Swiper(".mySwiper", {
   rewind: true,
 });
 
-let verticalSwiper = new Swiper(".timelineSwiper",{
+new Swiper(".timelineSwiper",{
   effect: "creative",
   grabCursor: true,
   nested: true,
   creativeEffect: {
     prev: {
-      // will set `translateY(-100%)` on previous slide
+      // will set Up (`translateY(-100%)`) on previous slide
       translate: [0, '-100%', 0],
     },
     next: {
@@ -51,30 +51,31 @@ document.addEventListener("mousemove", e => {
 
 
 const linksOfMenu = {
-  'Home' : 1, 
-  'About me' : 2, 
-  'Experience' : 3, 
-  'Projects' : 4, 
-  'Badges' : 5 , 
-  'Contact' : 6
+  'Home' : 0, 
+  'About me' : 1, 
+  'Experience' : 2, 
+  'Projects' : 3, 
+  'Badges' : 4, 
+  'Contact' : 5,
 };
 
 export function goToPageSwiper(desiredPage) {
   
-  let pageToNavigate = 0;
-
-  // Return index to page else return 0 if not found
-  for (const [key, value] of Object.entries(linksOfMenu)) {
-    if ( key === desiredPage ){
-      pageToNavigate = key;
-    }
-    console.log({ pageToNavigate, key, value});
-  };
+  let pageToNavigate = -1;
+  let transitionTime = 500;
   
-  if (pageToNavigate === 0) return null;
-  console.log(pageToNavigate);
-  mainSwiper.slideTo(parseInt(1), 500, false);
+  for (const [key, value] of Object.entries(linksOfMenu)) {
+
+    if (key === desiredPage){
+      pageToNavigate = value;
+      break;
+    }
+
+  };
+
+  if (pageToNavigate === -1) return;
+  
+  mainSwiper.slideTo(pageToNavigate, transitionTime, false);
   
 }
-
 
