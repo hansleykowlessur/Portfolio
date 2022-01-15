@@ -7,6 +7,7 @@
   --paragraph-size: 1.7rem;
   --header-size: 10rem;
   --top-gap: 5vh;
+  --sizing: 62.5%;
 }
 
 
@@ -19,6 +20,12 @@
 
 html {
   font-size: 62.5%;
+}
+
+@media only screen and (max-device-width: 375px) {
+  html {
+    font-size: 30%;
+  }
 }
 
 #myLogo {
@@ -52,6 +59,13 @@ html {
   transform: translate(-50%, -50%);
 }
 
+/* Hide custom cursor on phone */
+@media only screen and (max-device-width: 375px) {
+  #custom-cursor {
+    opacity: 0;
+  }
+}
+
 .menu {
   position: fixed;
   z-index: 35;
@@ -70,6 +84,14 @@ html {
   color: var(--clr-font-color);
   font-family: "KENOKY", sans-serif;
   font-size: 2rem;
+}
+
+/* Move menu to the bottom on phone */
+@media only screen and (max-device-width: 375px) {
+  .menu {
+    margin-left: 3%;
+    bottom: 5%;
+  }
 }
 
 .underline-styling {
@@ -303,7 +325,8 @@ html {
   justify-content: space-between;
 }
 
-#all-projects a{
+
+#all-projects a {
   text-decoration: none;
   color: var(--clr-font-color);
   width: 48%;
@@ -311,6 +334,20 @@ html {
   padding: 1.8rem 0;
 }
 
+@media only screen and (max-device-width: 375px) {
+  #all-projects {
+    gap: 7.5rem;
+  }
+  #all-projects a {
+    width: 100%;
+  }
+  .project-title p {
+    font-size: 2rem;
+  }
+  .project-description p{
+    font-size: 3rem;
+  }
+}
 
 .project-title {
   display: flex;
@@ -360,9 +397,20 @@ html {
   line-height: 2em;
 }
 
+
+
 #languages-technologies p {
   font-family: "Inter", sans-serif;
   font-size: var(--paragraph-size);
+}
+
+@media only screen and (max-device-width: 375px) {
+  #languages-technologies h1 {
+    font-size: 8rem;
+  }
+  #languages-technologies p {
+    font-size: 2rem;
+  }
 }
 
 .badges-certificates {
@@ -412,6 +460,17 @@ html {
   border-bottom: solid  1px var(--clr-font-color);
 }
 
+@media only screen and (max-device-width: 375px) {
+  #languages-technologies h1 {
+    font-size: 8rem;
+  }
+  #languages-technologies p {
+    font-size: 2rem;
+  }
+  #all-badges > ul li, #all-certificates > ul li{
+    font-size: 2.5rem;
+  }
+}
 
 /* #endregion */
 
@@ -471,6 +530,25 @@ html {
   margin-right: auto;
   font-size: var(--paragraph-size);
   padding: 2rem;
+}
+
+
+@media only screen and (max-device-width: 375px) {
+  .contacting{
+    flex-direction: column;
+  }
+  #stopping-by, #contact-email{
+    width: 100%;
+    height: 40%;
+  }
+  #contact-email{
+    margin-top: 1%;
+    font-size: 3rem;
+    word-wrap: break-word;
+  }
+  .email-styling{
+    font-size: 3rem;
+  }
 }
 
 /* 
