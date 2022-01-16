@@ -59,6 +59,17 @@ const linksOfMenu = {
   'Contact' : 5,
 };
 
+const imgOfProjects = {
+  1 : 'first-img',
+  2 : 'second-img',
+  3 : 'third-img',
+  4 : 'fourth-img',
+  5 : 'fifth-img',
+  6 : 'sixth-img',
+  7 : 'seventh-img',
+  8 : 'eighth-img',
+};
+
 export function goToPageSwiper(desiredPage) {
   
   let pageToNavigate = -1;
@@ -66,10 +77,10 @@ export function goToPageSwiper(desiredPage) {
   
   for (const [key, value] of Object.entries(linksOfMenu)) {
 
-    if (key === desiredPage){
+    if (key === desiredPage) {
       pageToNavigate = value;
       break;
-    }
+    };
 
   };
 
@@ -79,3 +90,38 @@ export function goToPageSwiper(desiredPage) {
   
 }
 
+export function hoverImg(imgId) {
+
+  let imgStyle = "opacity: 1; transition: opacity 0.3s ease-in;";
+
+  
+  showHideImg(imgId, imgStyle);
+
+};
+
+export function easeoutImg(imgId) {
+  
+  let imgStyle = "opacity: 0; transition: opacity 0.3s ease-in;";
+
+  showHideImg(imgId,imgStyle);        
+
+};
+
+function showHideImg(imgId, imgStyle) {
+
+  let imgIdxName = ''
+
+  for (const [key, value] of Object.entries(imgOfProjects)) {
+
+    if( parseInt(key) === imgId) {
+      imgIdxName = value;
+      console.log( { key , imgId, imgStyle, value} );
+    };
+  
+  };
+
+  if (imgIdxName === '') return;
+
+  document.getElementById(imgIdxName).style = imgStyle;
+
+};

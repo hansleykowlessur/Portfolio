@@ -165,6 +165,12 @@ html {
   line-height: 2em;
 }
 
+#code-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* 
 #region 
 */
@@ -176,6 +182,7 @@ html {
 
 #spinner{
   animation: spin 10s infinite linear;
+  height: 20vh;
 }
 
 @keyframes spin {
@@ -296,6 +303,16 @@ html {
   height: 2%;
 }
 
+.back-exp {
+  display: flex;
+  font-size: var(--paragraph-size);
+  justify-content: space-between;
+}
+
+.swiping-exp{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
 
 /* #endregion */
 
