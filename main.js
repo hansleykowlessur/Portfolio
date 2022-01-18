@@ -114,8 +114,9 @@ function showHideImg(imgId, imgStyle) {
   for (const [key, value] of Object.entries(imgOfProjects)) {
 
     if( parseInt(key) === imgId) {
+      
       imgIdxName = value;
-      console.log( { key , imgId, imgStyle, value} );
+
     };
   
   };

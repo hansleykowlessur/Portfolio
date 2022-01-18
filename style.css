@@ -307,6 +307,7 @@ html {
   display: flex;
   font-size: var(--paragraph-size);
   justify-content: space-between;
+  padding-top: 2%;
 }
 
 .swiping-exp{
@@ -346,7 +347,7 @@ html {
 #all-projects a {
   text-decoration: none;
   color: var(--clr-font-color);
-  width: 48%;
+  width: 40%;
   border-bottom: var(--clr-font-color) 2px solid;
   padding: 1.8rem 0;
 }
@@ -547,6 +548,8 @@ html {
   margin-right: auto;
   font-size: var(--paragraph-size);
   padding: 2rem;
+  text-decoration: none;
+  color: var(--clr-font-color)
 }
 
 
