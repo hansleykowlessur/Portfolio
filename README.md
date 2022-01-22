@@ -10,6 +10,7 @@ Hope you enjoy the experience. Don't hesitate to contact me.
 - HTML & CSS
 - Javascript
 - SwiperJS
+- VivusJS
 
 
 ## Special thanks

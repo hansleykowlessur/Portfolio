@@ -1,6 +1,9 @@
+/* eslint-disable quote-props */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable-next-line quote-props */
 import './style.css';
 import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js';
-
 
 // #region Custom cursor
 
@@ -60,16 +63,11 @@ const timelineSwiper = new Swiper('.timelineSwiper', {
 // #region Navigation links
 
 const linksOfMenu = {
-  // eslint-disable-next-line quote-props
   'Home': 0,
   'About me': 1,
-  // eslint-disable-next-line quote-props
   'Experience': 2,
-  // eslint-disable-next-line quote-props
   'Projects': 3,
-  // eslint-disable-next-line quote-props
   'Badges': 4,
-  // eslint-disable-next-line quote-props
   'Contact': 5,
 };
 
@@ -99,38 +97,52 @@ export function goToPageSwiper(desiredPage) {
 
 // Handles the animation of the main logo in the home page
 
-// eslint-disable-next-line no-undef
-const logoAnimation = new Vivus(
-  'myLogo', {
-    type: 'sync',
-    duration: 200,
-    // eslint-disable-next-line no-undef
-    animTimingFunction: Vivus.EASE,
-  }, function (e) {
-    e.el.classList.add('finished');
-  };
-);
+const logoAnimation = new Vivus('myLogo', {
+  type: 'sync',
+  duration: 200,
+  // eslint-disable-next-line no-undef
+  animTimingFunction: Vivus.EASE,
+}, ((e) => {
+  e.el.classList.add('finished');
+}));
 
 // #endregion
 
 // #region Image on hover
 
 const imgOfProjects = {
-  1 : 'first-img',
-  2 : 'second-img',
-  3 : 'third-img',
-  4 : 'fourth-img',
-  5 : 'fifth-img',
-  6 : 'sixth-img',
-  7 : 'seventh-img',
-  8 : 'eighth-img',
+  1: 'first-img',
+  2: 'second-img',
+  3: 'third-img',
+  4: 'fourth-img',
+  5: 'fifth-img',
+  6: 'sixth-img',
+  7: 'seventh-img',
+  8: 'eighth-img',
 };
+
+// Handles whether or not to show or fade out the image.
+
+function showHideImg(imgId, imgStyle) {
+  let imgIdxName = '';
+
+  // eslint-disable-next-line no-restricted-syntax
+  for (const [key, value] of Object.entries(imgOfProjects)) {
+    // eslint-disable-next-line radix
+    if (parseInt(key) === imgId) {
+      imgIdxName = value;
+    }
+  }
+
+  if (imgIdxName === '') return;
+
+  document.getElementById(imgIdxName).style = imgStyle;
+}
 
 // Show image on hover with transition.
 
 export function hoverImg(imgId) {
-
-  let imgStyle = 'opacity: 1; transition: opacity 0.3s ease-in;';
+  const imgStyle = 'opacity: 1; transition: opacity 0.3s ease-in;';
 
   showHideImg(imgId, imgStyle);
 };
@@ -138,29 +150,9 @@ export function hoverImg(imgId) {
 // Fade out the image when hovering out.
 
 export function easeoutImg(imgId) {
-  
-  let imgStyle = 'opacity: 0; transition: opacity 0.3s ease-in;';
+  const imgStyle = 'opacity: 0; transition: opacity 0.3s ease-in;';
 
   showHideImg(imgId,imgStyle);
-};
-
-// Handles whether or not to show or fade out the image.
-
-function showHideImg(imgId, imgStyle) {
-
-  let imgIdxName = ''
-
-  for (const [key, value] of Object.entries(imgOfProjects)) {
-
-    if( parseInt(key) === imgId) {
-      imgIdxName = value;
-    };
-
-  };
-
-  if (imgIdxName === '') return;
-
-  document.getElementById(imgIdxName).style = imgStyle;
 };
 
 // #endregion
