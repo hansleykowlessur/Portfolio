@@ -1,8 +1,8 @@
 
 # My personal website
 
-
-
+Hope you enjoy the experience. Don't hesitate to contact me. 
+(っ＾▿＾)۶🍸🌟🍺٩(˘◡˘ )
 
 
 ## Technologies
