@@ -202,7 +202,7 @@ html {
 
 #spinner{
   animation: spin 10s infinite linear;
-  height: 20vh;
+  height: 30vh;
 }
 
 @keyframes spin {
