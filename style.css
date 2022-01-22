@@ -78,6 +78,26 @@ html {
   list-style: none;
 }
 
+.swipe-right {
+  position: fixed;
+  z-index: 35;
+  color: var(--clr-font-color);
+  margin-top: 45%;
+  margin-left: 60%;
+  font-size: var(--paragraph-size);
+  font-family: "KENOKY", sans-serif;
+  animation: swipe-right 2s infinite alternate-reverse;
+}
+
+/* Animation of swipe right at the bottom of the page */
+@keyframes swipe-right {
+  from {
+      transform:translateX(0px);
+  }
+  to {
+      transform:translateX(20px);
+  }
+}
 
 .link-menu {
   text-decoration: none;
@@ -550,6 +570,11 @@ html {
   padding: 2rem;
   text-decoration: none;
   color: var(--clr-font-color)
+}
+
+.contribution-arrows {
+  text-decoration: none;
+  color: var(--clr-font-color);
 }
 
 
