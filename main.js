@@ -1,3 +1,6 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable quote-props */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
@@ -7,7 +10,7 @@ import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
 // #region Custom cursor
 
-const customCursor = document.getElementById('custom-cursor')
+const customCursor = document.getElementById('custom-cursor');
 document.addEventListener('mousemove', (e) => {
   customCursor.style.left = `${e.pageX}px`;
   customCursor.style.top = `${e.pageY}px`;
@@ -81,13 +84,13 @@ export function goToPageSwiper(desiredPage) {
     if (key === desiredPage) {
       pageToNavigate = value;
       break;
-    };
-  };
+    }
+  }
 
   // If not found, stop, else go to the page using the index.
   if (pageToNavigate === -1) return;
   mainSwiper.slideTo(pageToNavigate, transitionTime, false);
-};
+}
 
 // #endregion
 
@@ -145,14 +148,14 @@ export function hoverImg(imgId) {
   const imgStyle = 'opacity: 1; transition: opacity 0.3s ease-in;';
 
   showHideImg(imgId, imgStyle);
-};
+}
 
 // Fade out the image when hovering out.
 
 export function easeoutImg(imgId) {
   const imgStyle = 'opacity: 0; transition: opacity 0.3s ease-in;';
 
-  showHideImg(imgId,imgStyle);
-};
+  showHideImg(imgId, imgStyle);
+}
 
 // #endregion
